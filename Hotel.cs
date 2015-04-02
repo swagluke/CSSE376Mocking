@@ -25,8 +25,7 @@ namespace Expedia
         //Returns the occupant of a room in the hotel
         public String getRoomOccupant(int roomNumber)
         {
-            return Database.getRoomOccupant(roomNumber);
-                 
+            return Database.getRoomOccupant(roomNumber);    
         }
 		
 		#region Booking implementation
