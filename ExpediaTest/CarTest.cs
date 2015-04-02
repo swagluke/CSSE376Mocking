@@ -42,7 +42,8 @@ namespace ExpediaTest
         {
             var target = ObjectMother.Bmw();
             Assert.AreEqual(80, target.getBasePrice());
-        }		
+        }	
+	
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void TestThatCarThrowsOnBadLength()
