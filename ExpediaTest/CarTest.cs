@@ -31,19 +31,18 @@ namespace ExpediaTest
 		}
 		
 		[TestMethod]
-		public void TestThatCarHasCorrectBasePriceForTenDays()
-		{
-            var target = new Car(10);
-			Assert.AreEqual(80, target.getBasePrice());	
-		}
-		
-		[TestMethod]
 		public void TestThatCarHasCorrectBasePriceForSevenDays()
 		{
-			var target = new Car(7);
-			Assert.AreEqual(10*7*.8, target.getBasePrice());
+            var target = ObjectMother.Saab(); ;
+            Assert.AreEqual(10 * 7 * .8, target.getBasePrice());
 		}
-		
+
+        [TestMethod]
+        public void TestThatCarHasCorrectBasePriceForTenDays()
+        {
+            var target = ObjectMother.Bmw();
+            Assert.AreEqual(80, target.getBasePrice());
+        }		
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void TestThatCarThrowsOnBadLength()
